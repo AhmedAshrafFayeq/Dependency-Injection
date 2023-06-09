@@ -52,22 +52,6 @@ class ViewController: UIViewController {
 }
 
 
-class SecondViewController: UIViewController {
-    
-    let provider: ColorProviding?
-    
-    init(provider: ColorProviding?) {
-        self.provider = provider
-        super.init(nibName: nil, bundle: nil)
-    }
-    
-    required init?(coder: NSCoder) {
-        fatalError()
-    }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        view.backgroundColor = provider?.color ?? .black
-    }
-    
-}
+// Container:
+// 1- Should register Protcol in the Container and return the Class which implements it.
+// 2- Should register the VC in the Container and return the resolve of that type of protocol.
